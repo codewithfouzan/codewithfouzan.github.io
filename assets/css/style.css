@@ -2,8 +2,8 @@
    COLOR PALETTE & BASE VARIABLES
    ================================================ */
 :root {
-  --primary-color: #4a90e2;          /* Soft blue accent */
-  --secondary-color: #2f6fb7;        /* Deep blue accent */
+  --primary-color: #535a66;          /* Slate gray accent */
+  --secondary-color: #3f444d;        /* Darker gray accent */
   --background: #f2f4f7;             /* Light gray background */
   --text-color: #333;
   --card-bg: #ffffff;                /* White cards */
