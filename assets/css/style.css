@@ -152,3 +152,123 @@ footer {
   }
 }
 
+/* ---------------------------
+   PROJECTS PAGE
+----------------------------*/
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.project-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+.project-card h2 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  margin-bottom: 10px;
+}
+
+.project-card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project-card .btn:hover {
+  background: var(--secondary-color);
+}
+
+/* ---------------------------
+   ABOUT PAGE
+----------------------------*/
+.about-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: var(--card-bg);
+  box-shadow: 0 4px 8px var(--shadow);
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  text-align: left;
+  gap: 40px;
+}
+
+.about-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  color: var(--primary-color);
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 8px;
+}
+
+.contact-list a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for About */
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
