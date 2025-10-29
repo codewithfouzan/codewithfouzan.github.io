@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background: #fafafa;
+  color: #333;
+}
+h1, h2, h3 {
+  color: #2b2b2b;
+}
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.project {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
