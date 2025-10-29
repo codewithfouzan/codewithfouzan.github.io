@@ -20,7 +20,7 @@ body {
 }
 
 /* ---------------------------
-   HEADER / NAVIGATION
+   HEADER / INTRO SECTION
 ----------------------------*/
 header {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -30,20 +30,48 @@ header {
   box-shadow: 0 2px 6px var(--shadow);
 }
 
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.intro-text {
+  max-width: 500px;
+}
+
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 25px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 10px;
   font-weight: 500;
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.3s;
@@ -54,87 +82,39 @@ nav a:hover {
 }
 
 /* ---------------------------
-   CONTENT AREA
+   MAIN SECTION
 ----------------------------*/
 main {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
-}
-
-/* ---------------------------
-   PROJECT CARDS
-----------------------------*/
-.project {
-  background: var(--card-bg);
-  border-radius: 10px;
-  padding: 25px;
-  margin-bottom: 25px;
-  box-shadow: 0 4px 8px var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px var(--shadow);
-}
-
-.project h2 {
-  color: var(--primary-color);
-  margin-top: 0;
-}
-
-.project p {
-  margin: 10px 0;
-}
-
-.project a {
-  display: inline-block;
-  margin-top: 10px;
-  background: var(--primary-color);
-  color: white;
-  padding: 10px 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.project a:hover {
-  background: var(--secondary-color);
-}
-
-/* ---------------------------
-   ABOUT & CONTACT
-----------------------------*/
-.about {
   text-align: center;
-  background: white;
+}
+
+.highlight {
+  background: var(--card-bg);
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px var(--shadow);
 }
 
-.about h1 {
+.highlight h2 {
   color: var(--primary-color);
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-ul a {
-  color: var(--primary-color);
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
   text-decoration: none;
+  transition: background 0.3s;
 }
 
-ul a:hover {
-  text-decoration: underline;
+.cta-btn:hover {
+  background: var(--secondary-color);
 }
 
 /* ---------------------------
@@ -152,16 +132,23 @@ footer {
    RESPONSIVE DESIGN
 ----------------------------*/
 @media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
   header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   nav a {
-    display: block;
-    margin: 8px 0;
-  }
-
-  .project {
-    padding: 20px;
+    display: inline-block;
+    margin: 8px 6px;
   }
 }
+
