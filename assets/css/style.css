@@ -1,28 +1,167 @@
+/* ---------------------------
+   GENERAL STYLES
+----------------------------*/
+:root {
+  --primary-color: #007acc;
+  --secondary-color: #005b99;
+  --background: #f8fafc;
+  --text-color: #333;
+  --card-bg: #fff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 40px;
-  background: #fafafa;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
-h1, h2, h3 {
-  color: #2b2b2b;
+
+/* ---------------------------
+   HEADER / NAVIGATION
+----------------------------*/
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  box-shadow: 0 2px 6px var(--shadow);
 }
-a {
-  color: #007acc;
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+nav a:hover {
+  border-bottom: 2px solid white;
+}
+
+/* ---------------------------
+   CONTENT AREA
+----------------------------*/
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ---------------------------
+   PROJECT CARDS
+----------------------------*/
+.project {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+.project h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.project p {
+  margin: 10px 0;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project a:hover {
+  background: var(--secondary-color);
+}
+
+/* ---------------------------
+   ABOUT & CONTACT
+----------------------------*/
+.about {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.about h1 {
+  color: var(--primary-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+ul a {
+  color: var(--primary-color);
   text-decoration: none;
 }
-a:hover {
+
+ul a:hover {
   text-decoration: underline;
 }
-.project {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-header {
+
+/* ---------------------------
+   FOOTER
+----------------------------*/
+footer {
   text-align: center;
-  margin-bottom: 50px;
+  background: var(--primary-color);
+  color: white;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+----------------------------*/
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .project {
+    padding: 20px;
+  }
 }
