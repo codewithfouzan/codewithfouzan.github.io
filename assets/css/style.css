@@ -1,15 +1,18 @@
-/* ---------------------------
-   GENERAL STYLES
-----------------------------*/
+/* ================================================
+   COLOR PALETTE & BASE VARIABLES
+   ================================================ */
 :root {
-  --primary-color: #007acc;
-  --secondary-color: #005b99;
-  --background: #f8fafc;
+  --primary-color: #4a90e2;          /* Soft blue accent */
+  --secondary-color: #2f6fb7;        /* Deep blue accent */
+  --background: #f2f4f7;             /* Light gray background */
   --text-color: #333;
-  --card-bg: #fff;
+  --card-bg: #ffffff;                /* White cards */
   --shadow: rgba(0, 0, 0, 0.1);
 }
 
+/* ================================================
+   GENERAL STYLES
+   ================================================ */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--background);
@@ -19,9 +22,9 @@ body {
   line-height: 1.6;
 }
 
-/* ---------------------------
-   HEADER / INTRO SECTION
-----------------------------*/
+/* ================================================
+   HEADER SECTION
+   ================================================ */
 header {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
@@ -30,6 +33,33 @@ header {
   box-shadow: 0 2px 6px var(--shadow);
 }
 
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* Navigation Links */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+nav a:hover {
+  border-bottom: 2px solid white;
+}
+
+/* ================================================
+   INTRO / HOME PAGE SECTION
+   ================================================ */
 .intro-section {
   display: flex;
   align-items: center;
@@ -58,32 +88,9 @@ header {
   max-width: 500px;
 }
 
-header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: 500;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom 0.3s;
-}
-
-nav a:hover {
-  border-bottom: 2px solid white;
-}
-
-/* ---------------------------
-   MAIN SECTION
-----------------------------*/
+/* ================================================
+   MAIN / CONTENT AREA
+   ================================================ */
 main {
   max-width: 900px;
   margin: 40px auto;
@@ -117,9 +124,9 @@ main {
   background: var(--secondary-color);
 }
 
-/* ---------------------------
+/* ================================================
    FOOTER
-----------------------------*/
+   ================================================ */
 footer {
   text-align: center;
   background: var(--primary-color);
@@ -128,9 +135,9 @@ footer {
   margin-top: 50px;
 }
 
-/* ---------------------------
-   RESPONSIVE DESIGN
-----------------------------*/
+/* ================================================
+   RESPONSIVE - HEADER & HOME PAGE
+   ================================================ */
 @media (max-width: 768px) {
   .intro-section {
     flex-direction: column;
@@ -152,9 +159,9 @@ footer {
   }
 }
 
-/* ---------------------------
+/* ================================================
    PROJECTS PAGE
-----------------------------*/
+   ================================================ */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -201,9 +208,9 @@ footer {
   background: var(--secondary-color);
 }
 
-/* ---------------------------
+/* ================================================
    ABOUT PAGE
-----------------------------*/
+   ================================================ */
 .about-card {
   display: flex;
   flex-wrap: wrap;
@@ -220,19 +227,13 @@ footer {
 }
 
 .about-photo {
-  width: 180px;             
+  width: 180px;
   height: 180px;
-  border-radius: 50%;       
-  object-fit: cover;         
+  border-radius: 50%;
+  object-fit: cover;
   border: 4px solid var(--primary-color);
   box-shadow: 0 4px 10px var(--shadow);
   margin-bottom: 20px;
-}
-@media (max-width: 768px) {
-  .about-photo {
-    width: 140px;
-    height: 140px;
-  }
 }
 
 .about-text {
@@ -266,7 +267,9 @@ footer {
   text-decoration: underline;
 }
 
-/* Responsive for About */
+/* ================================================
+   RESPONSIVE - ABOUT PAGE
+   ================================================ */
 @media (max-width: 768px) {
   .about-card {
     flex-direction: column;
@@ -282,14 +285,12 @@ footer {
 
   .about-text {
     text-align: center;
-    padding: 0;         
-    margin: 0 auto;      
-    max-width: 90%;      
+    padding: 0;
+    margin: 0 auto;
+    max-width: 90%;
   }
 
   .about-text p {
     text-align: center;
   }
 }
-
-
