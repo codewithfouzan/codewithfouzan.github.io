@@ -131,7 +131,7 @@ main {
 .cta-btn:hover {
   background: var(--secondary-color);
 }
-.accent { color: var(--secondary-color); }
+.accent { color: #00bcd4); }
 
 /* ================================================
    FOOTER
