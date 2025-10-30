@@ -84,6 +84,14 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+.profile-pic {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
 .intro-text {
   max-width: 500px;
 }
@@ -123,6 +131,7 @@ main {
 .cta-btn:hover {
   background: var(--secondary-color);
 }
+.accent { color: var(--secondary-color); }
 
 /* ================================================
    FOOTER
